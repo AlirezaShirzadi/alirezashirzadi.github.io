@@ -1,0 +1,230 @@
+@import url("chrome://communicator/skin/");
+
+@font-face {
+  font-family: "Yekan";
+  src: url("./fonts/Yekan.eot");
+  src: url("./fonts/Yekan.eot") format("embedded-opentype"),
+    url("./fonts/Yekan.woff2") format("woff2"),
+    url("./fonts/Yekan.woff") format("woff"),
+    url("./fonts/Yekan.otf") format("opentype"),
+    url("./fonts/Yekan.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  font-display: auto;
+}
+
+* {
+  background-color: cornsilk;
+}
+
+:root {
+  --background-color-one: cadetblue;
+  --background-color-two: cornflowerblue;
+  --background-color-three: aquamarine;
+}
+
+html,
+body {
+  margin: 0;
+  position: relative;
+  font-family: "Yekan", serif;
+}
+
+h1 {
+  color: blue;
+  background-color: greenyellow;
+  font-size: 60px;
+}
+
+.menu-section nav#navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.menu-section > nav#navbar > a {
+  float: left;
+  display: block;
+  color: black;
+  background-color: #333;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+a[title] {
+  color: blue !important;
+}
+
+.content h1.main-title {
+  padding: 25px;
+  border: 10px blueviolet solid;
+  border-style: double dotted;
+  text-align: center;
+}
+
+.content > .second-title {
+  color: chocolate;
+  padding: 25px;
+  border: 10px blueviolet solid;
+  border-style: double dotted solid double;
+  text-align: center;
+}
+
+.first-p {
+  font-weight: 900;
+  font-size: larger;
+  font-size: 25px;
+  color: black;
+  margin: 10px;
+  padding-right: 30px;
+  padding-top: 10px;
+  border: 10px red solid;
+  border-style: double dotted none;
+  line-height: 60px;
+}
+
+h2 {
+  font-size: 50px;
+}
+
+h2 + p {
+  padding: 14px !important;
+  color: aqua !important;
+  background-color: darkblue;
+  text-transform: lowercase !important;
+}
+
+h2 ~ p {
+  padding: 10px;
+  color: crimson;
+  text-transform: capitalize;
+}
+
+.error-section > h1 {
+  text-align: center;
+  padding: 30px;
+}
+
+p[class*="error"] {
+  padding: 15px;
+  background-color: cadetblue;
+  color: aliceblue;
+}
+
+a[href^="./"][href$="t.html"] {
+  color: red !important;
+  background-color: yellow !important;
+}
+
+.call-section > .call-infos {
+  padding-top: 60px;
+}
+
+li:nth-of-type(2n + 1) {
+  color: blue;
+  font-size: 30px;
+}
+
+li:nth-last-of-type(2) {
+  color: fuchsia;
+  background-color: red;
+  font-size: 15px;
+}
+
+li:nth-child(2) {
+  font-size: 20px;
+  color: greenyellow;
+  font-weight: bolder;
+}
+
+.more-information > .error-p {
+  margin-top: 60px;
+  padding: 60px 0 60px;
+  background-image: url("./ax.jpg");
+  background-repeat: no-repeat;
+}
+
+.more-information > .error-p:nth-of-type(2n + 1):hover {
+  font-size: 10px;
+  color: yellowgreen;
+}
+
+.more-information > .error-p:nth-of-type(2n):hover {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.more-information > .error-p:not([accesskey]) {
+  font-style: italic;
+}
+
+.more-information > .error-p:nth-of-type(2n + 1)::after {
+  content: " این افتره ";
+  color: red;
+}
+
+.more-information > .error-p:nth-of-type(2n)::before {
+  content: " این بیفوره ";
+  color: green;
+}
+
+.flex-section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+
+@media only screen and (min-width: 300px) {
+  * {
+    background-color: var(--background-color-one);
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  * {
+    background-color: var(--background-color-two);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  * {
+    background-color: var(--background-color-three);
+  }
+
+  .flex-section {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    gap: 10px;
+  }
+}
+
+@media print {
+  p {
+    font-size: 10px;
+  }
+
+  .more-information > .error-p:nth-of-type(2n + 1) {
+    display: none !important;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  .more-information > .error-p {
+    margin-top: 60px;
+    padding: 20px 0 20px;
+    background-image: none;
+  }
+}

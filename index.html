@@ -1,69 +1,56 @@
-<!DOCTYPE>
-<html dir="rtl" lang="fa">
-    <head>
-        <meta charset="utf-8">
-        <title>تمرین چهارم</title>
-        <style type="text/css">
-            ul{
-                color: green;
-            }
-            #custom-ol{
-                background-color: blue;
-                color: white;
-                border-top-color: rgb(170, 50, 220, .6);
-                border-right-color: green;
-                border-bottom-color: red;
-                border-left-color: yellow;
-            }
-            .custom-ul{
-                width: 230px;
-                height: 340px;
-                background-color: grey;
-                color: white;
-                border: 4px blue dashed;
-            }
-        </style>
-    </head>
-    <body>
-        <div>
-            <h4 style="color: red;">مقطع تحصیلی</h4>
-            <ol type="A" >
-                <li style="background-color: gray;">دیپلم</li>
-                <li>لیسانس</li>
-                <li>فوق لیسانس</li>
-            </ol>
-            <ol type="a" id="custom-ol">
-                <li>دیپلم</li>
-                <li>لیسانس</li>
-                <li>فوق لیسانس</li>
-            </ol>
-            <ol type="i">
-                <li>دیپلم</li>
-                <li>لیسانس</li>
-                <li>فوق لیسانس</li>
-            </ol>
-            <ol type="I">
-                <li>دیپلم</li>
-                <li>لیسانس</li>
-                <li>فوق لیسانس</li>
-            </ol>
-            <h4>معدل</h4>
-            <ol start="10">
-                <li>20</li>
-                <li>17</li>
-                <li>18</li>
-            </ol>
-            <ul type="circle">
-                <li>20</li>
-                <li>17</li>
-                <li>18</li>
-            </ul>
-            <ul type="square" class="custom-ul">
-                <li>20</li>
-                <li>17</li>
-                <li>18</li>
-            </ul>
-            <button type="button" disabled="disabled">ثبت اطلاعات</button>
-        </div>
-    </body>
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحه اصلی</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body dir="rtl">
+    <main class="home-page">
+        <section class="menu-section">
+            <nav id="navbar">
+                <a href="./index.html" title="Home"><b>صفحه اصلی</b></a>
+                <a href="./about.html"><b>مدیریت خطا</b></a>
+                <a href="./contact.html"><b>تماس با ما</b></a>
+                <a href="./more.html"><b>اطلاعات بیشتر</b></a>
+            </nav>
+        </section>
+        <section class="content">
+            <h1 class="main-title">چگونه در جاوا اسکریپت یک API را فراخوانی کنیم؟</h1>
+            <p class="first-p">
+                فراخوانی یا Call کردن API در جاوا اسکریپت یکی از مهمترین و پایه‌ای‌ترین کارهایی‌ست که هر توسعه دهنده وبی
+                باید شیوه انجام آن را بداند. با استفاده از این تکنیک می‌توانید از طریق منابع خارج از وبسایت، داده دریافت
+                کنید و آن را با وب اپلیکیشن خودتان ادغام کنید.
+            </p>
+            <h2 class="second-title">API چیست؟</h2>
+            <p>قبل از اینکه وارد جزئیات تکنیکی مربوط به فراخوانی API در جاوا اسکریپت برویم نیاز است که با یکسری از
+                تعاریف پایه‌ای آشنا شوید. API در واقع یک رابط برنامه نویسی میان دو اپلیکیشن است که امکان انتقال داده بین
+                دو اپلیکیشن را فراهم می‌کند.</p>
+            <p>در فرایند کار با API شما می‌توانید داده‌های جدیدی را از یک منبع خارجی دریافت کنید و یا اینکه به
+                یک سرویس
+                خارجی یکسری اطلاعات ارسال کنید. البته این تنها ابتدایی‌ترین کارهایی‌ست که با استفاده از API انجام
+                می‌شود. از API در دنیای وب به صورت گسترده استفاده می‌شود و تقریبا هیچ اپلیکیشنی وجود ندارد که از یک
+                سرویس مبتنی بر API استفاده نکند.</p>
+            <h2 class="second-title">چگونه درخواست‌های POST ایجاد کنید</h2>
+            <p>
+                تا به اینجای کار ما روی درخواست‌های GET تمرکز داشته‌ایم و داده‌هایی را از یک منبع خارجی دریافت کرده‌ایم.
+                اما گاهی اوقات نیاز است که از طریق API داده‌هایی را منتقل کنیم. شما می‌توانید این کار را از طریق
+                درخواست‌های POST انجام دهید.
+            </p>
+            <h2 class="second-title">چگونه با API Key کار کنیم؟</h2>
+            <p>بسیاری از APIها برای استفاده و دریافت داده از آن‌ها، دسترسی آزاد در اختیار همگان قرار نمی‌دهد بلکه شما
+                باید یک مرحله از احراز هویت را طی کنید تا بتوانید به دیتا مورد نیاز دسترسی داشته باشید. در این شرایط
+                تنها کاربرانی که احراز هویت انجام داده‌اند می‌توانند به داده‌های سرویس خارجی دسترسی پیدا کنند.</p>
+            <p>
+                همچنین در فرایند تعریف requestOptions یک سربرگ با نام headers تعریف کرده‌ایم که مقدار Bearer به عنوان
+                پیشوند مربوط به apiKey را نیز اضافه کرده‌ایم. مطمئن شوید که مقدار درستی را به apiKey انتساب می‌کنید در
+                غیر اینصورت API Request شما به درستی انجام نمی‌شود.
+            </p>
+        </section>
+    </main>
+</body>
+
 </html>
