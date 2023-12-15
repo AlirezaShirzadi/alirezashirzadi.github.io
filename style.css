@@ -88,6 +88,25 @@ a[title] {
   line-height: 60px;
 }
 
+#my-input{
+  width: 100%;
+  height: 20px;
+  border-radius: 12px;
+  border: 5px solid red;
+}
+
+#output{
+  text-align: center;
+}
+
+button{
+  color: white;
+  background-color: black;
+  border-radius: 15px;
+  width: 150px;
+  height: 30px;
+}
+
 h2 {
   font-size: 50px;
 }
